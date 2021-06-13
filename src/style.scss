@@ -61,6 +61,10 @@ h3 {
     font-size: 4rem;
 }
 
+h5 {
+    font-size: 1.4rem;
+}
+
 h6 {
     font-size: 1.2rem;
 }
@@ -404,7 +408,6 @@ a {
         grid-template-columns: 249px 249px 249px 249px;
         row-gap: 50px;
         column-gap: 50px;
-
     }
 }
 
@@ -478,6 +481,86 @@ a {
     }
 }
 
+.blog {
+    padding: 80px 0;
+
+    & .gallery__title h2 {
+        color: #000;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 348px 348px 348px;
+        row-gap: 50px;
+        column-gap: 50px;
+
+        &-item {
+
+            & figcaption {
+                margin-top: -6px;
+                width: 100%;
+                color: $white;
+                background-color: rgba(0, 0, 0);
+                display: flex;
+                justify-content: space-between;
+                padding: 10px 0;
+                & h6 {
+                    padding-left: 10px;
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+                & span {
+                    padding-right: 10px;
+                    font-size: 12px;
+                }
+
+                & i {
+                    margin-right: 5px;
+                }
+            }
+
+            & footer {
+                padding: 30px 0;
+                display: flex;
+                & .date {
+                    padding: 10px 15px;
+                    text-align: center;
+                    background-color: #F3F3F3;
+                    height: fit-content;
+                    & p {
+                        color: #9D9D9D;
+                        font-weight: 700;
+                        font-size: 20px;
+                    }
+
+                    & hr {
+                        margin: 10px 0;
+                    }
+                }
+
+                & .description {
+                    padding-left: 10px;
+                    & h6 {
+                        color: black;
+                    }
+                    & p {
+                        margin-top: 10px;
+                    }
+                }
+            }
+            
+            & .btn {
+                &:hover {
+                    border-color: $pink;
+                    color: $pink;
+                }
+            }
+        }
+
+
+    }
+}
+
 .contact {
     padding: 80px 0;
     
@@ -509,5 +592,15 @@ a {
                 }
             }
         }
+    }
+}
+
+.footer {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    color: #A5A6AA;
+    & i {
+        color: #A61B19;
     }
 }
