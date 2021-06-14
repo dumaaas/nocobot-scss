@@ -1,5 +1,6 @@
 @import '_variables';
 @import '_mixins';
+@import '_placeholders';
 
 body {
     margin: 0;
@@ -18,7 +19,7 @@ body {
 
 hr {
     margin: 80px 0;
-    border: 0.5px solid #D7D7D7;
+    border: 0.5px solid $light-gray;
 }
 
 h1,
@@ -79,8 +80,12 @@ a {
     color: $white;
 }
 
+div {
+    position: relative;
+}
+
 .activeLink {
-    color: $pink;
+    color: $dark-pink;
 }
 
 .btn {
@@ -89,15 +94,8 @@ a {
     padding: 8px 18px 10px;
     border-width: 1px;
     border-style: solid;
-    border-color: $pink;
     border-image: initial;
-    background-color: $pink;
-    color: $white;
-
-    &:hover {
-        background-color: transparent;
-        border-color: $white;
-    }
+    @include btn($dark-pink, transparent, $white, transparent, $white, $white);
 }
 
 .wrapper {
@@ -117,7 +115,7 @@ a {
 
     &.row3 {
         background-color: $white;
-        color: #474747;
+        color: $dark-gray;
     }
 }
 
@@ -176,7 +174,7 @@ a {
         &-icon {
             float: right;
             font-size: 1rem;
-            color: $pink;
+            color: $dark-pink;
         }
 
         & li:nth-child(1) {
@@ -268,9 +266,7 @@ a {
     padding: 80px 0;
 
     &__introblocks {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        @extend %flex-between;
         position: relative;
         margin: -280px 0 0 0;
         z-index: 1;
@@ -288,40 +284,51 @@ a {
                 width: 100%;
                 color: $white;
                 background-color: rgba(0, 0, 0, .55);
+                max-height: 60px;
+                overflow: hidden;
 
                 & h6 {
                     padding: 20px 0;
                     font-weight: 700;
                     line-height: 1;
                 }
+
+
+                & div {
+                    & p {
+                        padding: 0 20px 20px;
+                    }
+                }
+
+                &:hover {
+                    max-height: 100%;
+                }
+
             }
         }
     }
 
     &__results {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        @extend %flex-between;
 
         &-left {
             padding: 15px;
-            border: 0.5px solid #D7D7D7;
+            border: 0.5px solid $light-gray;
         }
 
         &-right {
-            display: grid;
-            grid-template-columns: 289px 289px;
+            @include grid(289px 289px);
 
             & .card {
                 width: 240px;
                 padding: 25px;
 
                 &:hover {
-                    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+                    box-shadow: $resultsCard-shadow;
                 }
 
                 h6 {
-                    color: $pink;
+                    color: $dark-pink;
                     letter-spacing: 0.2px;
                     padding-bottom: 10px;
                 }
@@ -345,10 +352,37 @@ a {
     }
 
     &__grid {
-        display: grid;
-        grid-template-columns: 348px 348px 348px;
-        row-gap: 50px;
-        column-gap: 50px;
+        @include grid(348px 348px 348px, 50px, 50px);
+        &-item {
+            span.img-overlay {
+                background: $dark-pink;
+                opacity: 0.4;
+                display: none;
+                height: calc(100% - 6px);
+                width: 100%;
+                top: 0;
+                position: absolute;
+
+                &::after {
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    content: "\f067";
+                    color: $white !important;
+                    opacity: 1 !important;
+                    font-size: 40px;
+                    top: 50%;
+                    left: 45%;
+                    transform: translate(-50%, -45%);
+                    position: relative;
+                    text-align: center;
+                }
+            }
+
+            &:hover span.img-overlay {
+                display: block;
+                cursor: pointer;
+            }
+        }
     }
 }
 
@@ -356,14 +390,11 @@ a {
     padding: 80px 0;
 
     & .gallery__title h2 {
-        color: #000;
+        color: $black;
     }
 
     &__grid {
-        display: grid;
-        grid-template-columns: 250px 250px 250px 250px;
-        row-gap: 50px;
-        column-gap: 50px;
+        @include grid(250px 250px 250px 250px, 50px, 50px);
 
         &-item {
             width: 100%;
@@ -377,15 +408,15 @@ a {
 
             & figcaption {
                 width: 100%;
-                color: #000;
+                color: $black;
                 margin-top: -6px;
-                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                box-shadow: $caption-shadow;
 
                 & h6 {
                     padding: 30px 0 0;
                     font-weight: 700;
                     line-height: 1;
-                    color: #000;
+                    color: $black;
                 }
 
                 & p {
@@ -400,14 +431,11 @@ a {
     padding: 80px 0;
 
     & .gallery__title h2 {
-        color: #000;
+        color: $black;
     }
 
     &__grid {
-        display: grid;
-        grid-template-columns: 249px 249px 249px 249px;
-        row-gap: 50px;
-        column-gap: 50px;
+        @include grid(249px 249px 249px 249px, 50px, 50px);
     }
 }
 
@@ -418,7 +446,7 @@ a {
         &-quote {
             padding: 20px;
             border-radius: 10px;
-            background-color: rgba(255,255,255,.5);
+            background-color: rgba(255, 255, 255, .5);
             text-align: center;
             font-size: 20px;
             line-height: 32px;
@@ -427,13 +455,13 @@ a {
             &::after {
                 content: "";
                 position: absolute;
-                width: 0; 
-                height: 0; 
+                width: 0;
+                height: 0;
                 border-left: 20px solid transparent;
                 border-right: 20px solid transparent;
                 left: 48.4%;
                 bottom: -20px;
-                border-top: 20px solid rgba(255,255,255,.5);
+                border-top: 20px solid rgba(255, 255, 255, .5);
             }
 
             & img {
@@ -450,12 +478,14 @@ a {
             }
         }
 
-        &-user { 
+        &-user {
             padding-top: 50px;
             width: 100%;
             text-align: center;
 
-            & img, p, span {
+            & img,
+            p,
+            span {
                 display: block;
                 margin: 0 auto;
             }
@@ -485,30 +515,27 @@ a {
     padding: 80px 0;
 
     & .gallery__title h2 {
-        color: #000;
+        color: $black;
     }
 
     &__grid {
-        display: grid;
-        grid-template-columns: 348px 348px 348px;
-        row-gap: 50px;
-        column-gap: 50px;
-
+        @include grid(348px 348px 348px, 50px, 50px);
         &-item {
 
             & figcaption {
+                @extend %flex-between;
                 margin-top: -6px;
                 width: 100%;
                 color: $white;
-                background-color: rgba(0, 0, 0);
-                display: flex;
-                justify-content: space-between;
+                background-color: $black;
                 padding: 10px 0;
+
                 & h6 {
                     padding-left: 10px;
                     font-size: 14px;
                     line-height: 22px;
                 }
+
                 & span {
                     padding-right: 10px;
                     font-size: 12px;
@@ -521,14 +548,16 @@ a {
 
             & footer {
                 padding: 30px 0;
-                display: flex;
+                @extend %flex-between;
+
                 & .date {
                     padding: 10px 15px;
                     text-align: center;
-                    background-color: #F3F3F3;
+                    background-color: $light-gray;
                     height: fit-content;
+
                     & p {
-                        color: #9D9D9D;
+                        color: darken($light-gray, 40%);
                         font-weight: 700;
                         font-size: 20px;
                     }
@@ -540,20 +569,19 @@ a {
 
                 & .description {
                     padding-left: 10px;
+
                     & h6 {
                         color: black;
                     }
+
                     & p {
                         margin-top: 10px;
                     }
                 }
             }
-            
+
             & .btn {
-                &:hover {
-                    border-color: $pink;
-                    color: $pink;
-                }
+                @include btn($dark-pink, transparent, $white, transparent, $dark-pink, $dark-pink);
             }
         }
 
@@ -563,32 +591,26 @@ a {
 
 .contact {
     padding: 80px 0;
-    
+
     &__grid {
-        display: grid;
-        grid-template-columns: 249px 249px 249px 249px;
-        row-gap: 50px;
-        justify-content: space-between;
+        @include grid(249px 249px 249px 249px, 50px, 50px, space-between);
         &-item {
-            display: flex;
-            flex-direction: row;
-        
+            @include flex(row);
             & i {
                 font-size: 18px;
                 border-radius: 50px;
-                border: 1px solid #D099D5;
-                color: #D099D5;
+                border: 1px solid $light-pink;
+                color: $light-pink;
                 padding: 15px;
             }
 
             &-content {
                 padding: 5px 0 0 20px;
-                display: flex;
-                flex-direction: column;
+                @include flex(column);
                 color: $white;
 
                 & p {
-                font-weight: 700;
+                    font-weight: 700;
                 }
             }
         }
@@ -596,11 +618,12 @@ a {
 }
 
 .footer {
+    @include flex(row, space-between);
+
     padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    color: #A5A6AA;
+    color: $light-gray;
+
     & i {
-        color: #A61B19;
+        color: $dark-red;
     }
 }

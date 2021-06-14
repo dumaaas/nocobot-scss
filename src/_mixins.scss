@@ -1,0 +1,26 @@
+@mixin btn($btnColor, $btnBorder, $textColor, $hoverColor, $hoverBorder, $textHover) {
+    
+    border-color: $btnBorder;
+    background-color: $btnColor;
+    color: $textColor;
+
+    &:hover {
+        background-color: $hoverColor;
+        border-color: $hoverBorder;
+        color: $textHover;
+    }
+}
+
+@mixin grid($gridTemplate, $rowGap: null, $colGap: null, $justify: null ) {
+    display: grid;
+    grid-template-columns: $gridTemplate;
+    row-gap: $rowGap;
+    column-gap: $colGap;
+    justify-content: $justify;
+}
+
+@mixin flex($direction, $justify: null) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+}
