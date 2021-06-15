@@ -1,35 +1,25 @@
-/*
-*   Import of
-*   variables
-*   mixins
-*   placeholders
-*/
+//  Imports
 @import '_variables';
 @import '_mixins';
 @import '_placeholders';
 
-/*
-*   Function
-*   Letter spacing converter
-*/
+//  Functions
+
+//  Letter-spacing converter
 @function ls($name) {
     $value: map_get($ls, $name);
     @return ($value / 1000) * 1em;
 }
 
-/*
-*   Function
-*   Font convert from px to rem
-*/
+//  Converter from px to rem
 @function toRem($value) {
     $remValue: ($value / 16) + rem;
     @return $remValue;
 }
 
-/*
-*   List
-*   Letter spacing
-*/
+//  Lists
+
+//  Letter-spacing list
 $ls: (base: -10,
     heading: 10,
     button: 5,
