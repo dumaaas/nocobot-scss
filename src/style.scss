@@ -4,7 +4,7 @@
 @import '_placeholders';
 
 //  Functions
-
+//  Test. Changing more then one file.
 //  Letter-spacing converter
 @function ls($name) {
     $value: map_get($ls, $name);
