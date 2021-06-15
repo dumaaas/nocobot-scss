@@ -11,3 +11,16 @@ $dark-red: #A61B19 !default;
 //  Box-shadow variables
 $caption-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !default; 
 $resultsCard-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px !default;
+
+//  Margin variables
+$mx-auto: 0 auto;
+
+// Text variables 
+$primary-align: center;
+$secondary-align: left;
+$tertiary-align: right;
+$primary-transform: uppercase;
+
+// Flex
+$primary-direction: row;
+$secondary-direction: column;

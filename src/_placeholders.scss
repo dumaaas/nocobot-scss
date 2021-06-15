@@ -7,7 +7,7 @@
 //  Default flex style
 %flex-between {
     display: flex;
-    flex-direction: row;
+    flex-direction: $primary-direction;
     justify-content: space-between;
 }
 
