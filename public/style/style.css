@@ -1,19 +1,14 @@
 @charset "UTF-8";
-
 /*
 *   Placeholders
 */
-.blog__grid-item footer,
-.blog__grid-item figcaption,
-.about__results,
-.about__introblocks {
+.blog__grid-item footer, .blog__grid-item figcaption, .about__results, .about__introblocks {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.about__results-left,
-hr {
+.about__results-left, hr {
   border-width: 0.5px;
   border-style: solid;
   border-color: #bebebe;
@@ -131,15 +126,12 @@ div {
   background-color: #B946AD;
   color: #fff;
 }
-
 .btn:hover {
   background-color: transparent;
 }
-
 .btn.btn-primary:hover {
   border-color: #fff;
 }
-
 .btn.btn-secondary:hover {
   border-color: #B946AD;
   color: #B946AD;
@@ -156,15 +148,12 @@ div {
   word-wrap: break-word;
   color: #fff;
 }
-
 .wrapper.row0 {
   background-color: #161C21;
 }
-
 .wrapper.row1 {
   background-color: rgba(0, 0, 0, 0.75);
 }
-
 .wrapper.row3 {
   background-color: #fff;
   color: #474747;
@@ -206,31 +195,25 @@ div {
   font-size: 0.8rem;
   text-transform: uppercase;
 }
-
 .topbar i {
   line-height: normal;
 }
-
 .topbar ul li {
   margin-right: 0.9375rem;
   display: inline-block;
 }
-
 .topbar__left li {
   float: left;
   font-size: 0.7rem;
 }
-
 .topbar__left i {
   margin-right: 0.3125rem;
 }
-
 .topbar__right-icon {
   float: right;
   font-size: 1rem;
   color: #B946AD;
 }
-
 .topbar__right li:nth-child(1) {
   margin-right: 0;
 }
@@ -242,27 +225,22 @@ div {
 .header ul li {
   margin-right: 0.9375rem;
 }
-
 .header__left li {
   float: left;
   margin-top: 1.25rem;
 }
-
 .header__right li {
   float: right;
   text-transform: uppercase;
   font-size: 0.9rem;
 }
-
 .header__right li a {
   display: block;
   padding: 1.875rem 0;
 }
-
 .header__right li a:hover {
   color: #B946AD;
 }
-
 .header__right li:nth-child(1) {
   margin-right: 0;
 }
@@ -277,7 +255,6 @@ div {
   position: relative;
   z-index: 1;
 }
-
 .overlay::after {
   display: block;
   position: absolute;
@@ -298,24 +275,20 @@ div {
 .pageintro {
   padding: 12.5rem 0 25rem;
 }
-
 .pageintro article {
   display: block;
   max-width: 75%;
   margin: 0 auto;
   text-align: center;
 }
-
 .pageintro article h3 {
   margin-bottom: 1.25rem;
 }
-
 .pageintro article p {
   max-width: 65%;
   line-height: 2rem;
   margin: 0 auto;
 }
-
 .pageintro article footer {
   margin-top: 3.125rem;
 }
@@ -327,21 +300,18 @@ div {
 .about {
   padding: 80px 0;
 }
-
 .about__introblocks {
   position: relative;
   margin: -17.5rem 0 0 0;
   z-index: 1;
   text-align: center;
 }
-
 .about__introblocks figure {
   width: 21.75rem;
   text-align: center;
   display: block;
   position: relative;
 }
-
 .about__introblocks figure figcaption {
   position: absolute;
   bottom: 0.375rem;
@@ -351,39 +321,31 @@ div {
   max-height: 3.125rem;
   overflow: hidden;
 }
-
 .about__introblocks figure figcaption h6 {
   padding: 0.875rem 0;
   font-weight: 700;
   line-height: 1;
 }
-
 .about__introblocks figure figcaption div p {
   padding: 0 0.875rem 0.875rem;
 }
-
 .about__introblocks figure figcaption:hover {
   max-height: 100%;
 }
-
 .about__results-left {
   padding: 0.9375rem;
 }
-
 .about__results-right {
   display: grid;
   grid-template-columns: 18.0625rem 18.0625rem;
 }
-
 .about__results-right .card {
   width: 15rem;
   padding: 1.5625rem;
 }
-
 .about__results-right .card:hover {
   box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
 }
-
 .about__results-right .card h6 {
   color: #B946AD;
   letter-spacing: 0.0125rem;
@@ -397,25 +359,21 @@ div {
 .gallery {
   padding: 5rem 0;
 }
-
 .gallery__title {
   text-align: center;
   padding-bottom: 5rem;
 }
-
 .gallery__title .heading {
   display: inline-block;
   position: relative;
   padding: 0px 0px 0.9375rem;
 }
-
 .gallery__grid {
   display: grid;
   grid-template-columns: 21.75rem 21.75rem 21.75rem;
   row-gap: 3.125rem;
   column-gap: 3.125rem;
 }
-
 .gallery__grid-item span.img-overlay {
   background: #B946AD;
   opacity: 0.4;
@@ -425,7 +383,6 @@ div {
   top: 0;
   position: absolute;
 }
-
 .gallery__grid-item span.img-overlay::after {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -439,7 +396,6 @@ div {
   position: relative;
   text-align: center;
 }
-
 .gallery__grid-item:hover span.img-overlay {
   display: block;
   cursor: pointer;
@@ -452,43 +408,36 @@ div {
 .team {
   padding: 80px 0;
 }
-
 .team .gallery__title h2 {
   color: #000;
 }
-
 .team__grid {
   display: grid;
   grid-template-columns: 15.625rem 15.625rem 15.625rem 15.625rem;
   row-gap: 3.125rem;
   column-gap: 3.125rem;
 }
-
 .team__grid-item {
   width: 100%;
   text-align: center;
   display: block;
   position: relative;
 }
-
 .team__grid-item img {
   width: 15.625rem;
 }
-
 .team__grid-item figcaption {
   width: 100%;
   color: #000;
   margin-top: -0.375rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-
 .team__grid-item figcaption h6 {
   padding: 1.875rem 0 0;
   font-weight: 700;
   line-height: 1;
   color: #000;
 }
-
 .team__grid-item figcaption p {
   padding: 0.3125rem 0 1.875rem;
 }
@@ -500,11 +449,9 @@ div {
 .products {
   padding: 80px 0;
 }
-
 .products .gallery__title h2 {
   color: #000;
 }
-
 .products__grid {
   display: grid;
   grid-template-columns: 15.5625rem 15.5625rem 15.5625rem 15.5625rem;
@@ -519,7 +466,6 @@ div {
 .yousaid {
   padding: 5rem 0;
 }
-
 .yousaid__block-quote {
   padding: 1.25rem;
   border-radius: 0.625rem;
@@ -529,7 +475,6 @@ div {
   line-height: 2rem;
   position: relative;
 }
-
 .yousaid__block-quote::after {
   content: "";
   position: absolute;
@@ -541,7 +486,6 @@ div {
   bottom: -1.25rem;
   border-top: 1.25rem solid rgba(255, 255, 255, 0.5);
 }
-
 .yousaid__block-quote img {
   position: absolute;
   left: 1.25rem;
@@ -550,38 +494,31 @@ div {
   height: 3.75rem;
   z-index: -1;
 }
-
 .yousaid__block-quote img:nth-child(2) {
   left: 5rem;
 }
-
 .yousaid__block-user {
   padding-top: 3.125rem;
   width: 100%;
   text-align: center;
 }
-
 .yousaid__block-user img,
 .yousaid__block-user p,
 .yousaid__block-user span {
   display: block;
   margin: 0 auto;
 }
-
 .yousaid__block-user img {
   border-radius: 3.125rem;
 }
-
 .yousaid__block-user p {
   padding-top: 0.625rem;
   font-size: 1.125rem;
   font-weight: 600;
 }
-
 .yousaid__block-user span {
   font-style: italic;
 }
-
 .yousaid__block-user a {
   margin-top: 3.125rem;
 }
@@ -593,18 +530,15 @@ div {
 .blog {
   padding: 5rem 0;
 }
-
 .blog .gallery__title h2 {
   color: #000;
 }
-
 .blog__grid {
   display: grid;
   grid-template-columns: 21.75rem 21.75rem 21.75rem;
   row-gap: 3.125rem;
   column-gap: 3.125rem;
 }
-
 .blog__grid-item figcaption {
   margin-top: -0.4375rem;
   width: 100%;
@@ -612,51 +546,41 @@ div {
   background-color: #000;
   padding: 0.625rem 0;
 }
-
 .blog__grid-item figcaption h6 {
   padding-left: 0.625rem;
   font-size: 0.875rem;
   line-height: 1.375rem;
 }
-
 .blog__grid-item figcaption span {
   padding-right: 0.625rem;
   font-size: 0.75rem;
 }
-
 .blog__grid-item figcaption i {
   margin-right: 0.3125rem;
 }
-
 .blog__grid-item footer {
   padding: 1.875rem 0;
 }
-
 .blog__grid-item footer .date {
   padding: 0.625rem 0.9375rem;
   text-align: center;
   background-color: #D7D7D7;
   height: fit-content;
 }
-
 .blog__grid-item footer .date p {
   color: #717171;
   font-weight: 700;
   font-size: 1.25rem;
 }
-
 .blog__grid-item footer .date hr {
   margin: 0.625rem 0;
 }
-
 .blog__grid-item footer .description {
   padding-left: 0.625rem;
 }
-
 .blog__grid-item footer .description h6 {
   color: black;
 }
-
 .blog__grid-item footer .description p {
   margin-top: 0.625rem;
 }
@@ -668,7 +592,6 @@ div {
 .contact {
   padding: 80px 0;
 }
-
 .contact__grid {
   display: grid;
   grid-template-columns: 15.5625rem 15.5625rem 15.5625rem 15.5625rem;
@@ -676,12 +599,10 @@ div {
   column-gap: 3.125rem;
   justify-content: space-between;
 }
-
 .contact__grid-item {
   display: flex;
   flex-direction: row;
 }
-
 .contact__grid-item i {
   font-size: 1.125rem;
   border-width: 1px;
@@ -691,14 +612,12 @@ div {
   color: #D099D5;
   padding: 0.9375rem;
 }
-
 .contact__grid-item-content {
   padding: 0.3125rem 0 0 1.25rem;
   display: flex;
   flex-direction: column;
   color: #fff;
 }
-
 .contact__grid-item-content p {
   font-weight: 700;
 }
@@ -714,7 +633,6 @@ div {
   padding: 0.625rem 0;
   color: #D7D7D7;
 }
-
 .footer i {
   color: #A61B19;
 }
