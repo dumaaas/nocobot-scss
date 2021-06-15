@@ -1,5 +1,13 @@
+@import '_mixins';
+
+//  Default flex style
 %flex-between {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+//  Default border style
+%border {
+    @include border(0.5px, solid, darken($light-gray, 10%));
 }

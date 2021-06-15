@@ -1,16 +1,21 @@
-@mixin btn($btnColor, $btnBorder, $textColor, $hoverColor, $hoverBorder, $textHover) {
-    
-    border-color: $btnBorder;
-    background-color: $btnColor;
-    color: $textColor;
-
-    &:hover {
-        background-color: $hoverColor;
-        border-color: $hoverBorder;
-        color: $textHover;
-    }
+//  Reusable style for border
+@mixin border($width, $style, $color, $radius: null) {
+    border-width: $width;
+    border-style: $style;
+    border-color: $color;
+    border-radius: $radius;
 }
 
+//  Reusable style for text
+@mixin font-style($fontFamily: "Verdana, Geneva, sans-serif", $fontSize: null, $fontWeight: 400, $color: $black, $lineHeight: toRem(25.6), $letterSpacing: ls(base)) {
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    line-height: $lineHeight;
+    letter-spacing: $letterSpacing;
+}
+
+//  Reusable style for grid
 @mixin grid($gridTemplate, $rowGap: null, $colGap: null, $justify: null ) {
     display: grid;
     grid-template-columns: $gridTemplate;
@@ -19,6 +24,7 @@
     justify-content: $justify;
 }
 
+//  Reusable style for flex
 @mixin flex($direction, $justify: null) {
     display: flex;
     flex-direction: $direction;

@@ -1,11 +1,13 @@
+//  Color variables
 $dark-pink: #B946AD !default;
-$light-pink: #D099D5;
-$white: #fff;
-$black: #000;
-$light-gray: #D7D7D7;
-$dark-gray: #474747;
-$main-bg: #161C21;
-$dark-red: #A61B19;
+$light-pink: #D099D5 !default;
+$white: #fff !default;
+$black: #000 !default;
+$light-gray: #D7D7D7 !default;
+$dark-gray: #474747 !default;
+$main-bg: #161C21 !default;
+$dark-red: #A61B19 !default;
 
-$caption-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
-$resultsCard-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+//  Box-shadow variables
+$caption-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !default; 
+$resultsCard-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px !default;
