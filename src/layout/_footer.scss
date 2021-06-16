@@ -4,8 +4,8 @@
 */
 .footer {
     @include flex($primary-direction, space-between);
-
-    padding: toRem(10) 0;
+    flex-wrap: wrap;
+    padding: toRem(10);
     color: $light-gray;
 
     i {

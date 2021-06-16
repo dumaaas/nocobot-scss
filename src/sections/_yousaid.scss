@@ -5,6 +5,10 @@
 .yousaid {
     padding: toRem(80) 0;
 
+    @include breakpoint(sm) {
+        padding: toRem(80) toRem(20);
+    }
+
     // Block 
     &__block {
         //  Quote of block
@@ -29,6 +33,15 @@
                 left: 48.4%;
                 bottom: toRem(-20);
                 border-top: toRem(20) solid rgba(255, 255, 255, .5);
+                @include breakpoint(lg) {
+                    left: 48%;
+                }
+                @include breakpoint(md) {
+                    left: 47.4%;
+                }
+                @include breakpoint(sm) {
+                    left: 46%;
+                }
             }
             
             // Apostrophe images

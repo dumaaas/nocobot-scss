@@ -4,10 +4,29 @@
 */
 .blog {
     padding: toRem(80) 0;
-
+    
     &__grid {
         @include grid(toRem(348) toRem(348) toRem(348), toRem(50), toRem(50));
 
+        @include breakpoint(lg) {
+            justify-content: center;
+            @include grid(toRem(280) toRem(280) toRem(280), toRem(50), toRem(50));
+        }
+
+        @include breakpoint(md) {
+            
+            justify-content: center;
+            @include grid(toRem(348) toRem(348), toRem(50), toRem(50));
+
+            &-item:nth-child(3) {
+                display: none;
+            }
+        }
+
+        @include breakpoint(sm) {
+            justify-content: center;
+            @include grid(toRem(300), toRem(50), toRem(50));
+        }
         footer {
             padding: toRem(30) 0;
             @extend %flex-between;

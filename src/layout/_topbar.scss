@@ -28,7 +28,6 @@
     }
 
     &__right {
-
         &-icon {
             float: $tertiary-align;
             font-size: toRem(16);
@@ -38,6 +37,11 @@
         li:nth-child(1) {
             margin-right: 0;
         }
+    }
+}
 
+@include breakpoint(sm) {
+    .topbar {
+        display: none !important;
     }
 }

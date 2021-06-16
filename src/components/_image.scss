@@ -2,6 +2,10 @@
 .image-item {
     //  Overlay for image
     //  Hovering over gallery img will show this overlay
+    img {
+        width: 100%;
+    }
+    
     span.img-overlay {
         background: $dark-pink;
         opacity: 0.4;

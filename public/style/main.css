@@ -113,6 +113,25 @@ div {
   float: left;
   margin-top: 1.25rem;
 }
+@media (max-width: 767px) {
+  .header__left li {
+    margin-top: 0.9375rem;
+  }
+}
+.header__right ul.small {
+  display: none;
+}
+@media (max-width: 767px) {
+  .header__right ul.big {
+    display: none;
+  }
+  .header__right ul.small {
+    display: block;
+    float: right;
+    padding: 1.25rem 0;
+    font-size: 1.875rem;
+  }
+}
 .header__right li {
   float: right;
   text-transform: uppercase;
@@ -161,6 +180,11 @@ div {
   margin-right: 0;
 }
 
+@media (max-width: 767px) {
+  .topbar {
+    display: none !important;
+  }
+}
 /*
 *   Container 
 */
@@ -168,6 +192,22 @@ div {
   display: block;
   margin: 0 auto;
   max-width: 71.25rem;
+  padding: 0 1.25rem;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .hoc {
+    max-width: 60.625rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .hoc {
+    max-width: 46.875rem;
+  }
+}
+@media (max-width: 767px) {
+  .hoc {
+    max-width: 43.75rem;
+  }
 }
 
 .clear::after {
@@ -234,7 +274,8 @@ div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0.625rem 0;
+  flex-wrap: wrap;
+  padding: 0.625rem;
   color: #D7D7D7;
 }
 .footer i {
@@ -299,7 +340,8 @@ figure {
   position: relative;
 }
 figure.figure--about {
-  width: 21.75rem;
+  width: 18.75rem;
+  margin: 0 auto;
 }
 figure img {
   width: 100%;
@@ -357,8 +399,14 @@ figure figcaption.figcaption--blog i {
 }
 
 .card {
-  width: 15rem;
+  width: 11.25rem;
   padding: 1.5625rem;
+  margin: 0 auto;
+}
+@media (min-width: 1200px) {
+  .card {
+    width: 15rem;
+  }
 }
 .card:hover {
   box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
@@ -369,6 +417,9 @@ figure figcaption.figcaption--blog i {
   padding-bottom: 0.625rem;
 }
 
+.image-item img {
+  width: 100%;
+}
 .image-item span.img-overlay {
   background: #B946AD;
   opacity: 0.4;
@@ -403,6 +454,16 @@ figure figcaption.figcaption--blog i {
 .pageintro {
   padding: 12.5rem 0 25rem;
 }
+@media (max-width: 767px) {
+  .pageintro {
+    padding: 6.25rem 0 18.75rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .pageintro {
+    padding: 9.375rem 0 21.875rem;
+  }
+}
 .pageintro article {
   display: block;
   max-width: 75%;
@@ -411,6 +472,16 @@ figure figcaption.figcaption--blog i {
 }
 .pageintro article h3 {
   margin-bottom: 1.25rem;
+}
+@media (max-width: 767px) {
+  .pageintro article span {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .pageintro article span {
+    display: none;
+  }
 }
 .pageintro article p {
   max-width: 65%;
@@ -429,17 +500,38 @@ figure figcaption.figcaption--blog i {
   padding: 80px 0;
 }
 .about__introblocks {
+  flex-wrap: wrap;
   position: relative;
   margin: -17.5rem 0 0 0;
   z-index: 1;
   text-align: center;
 }
+.about__results {
+  flex-wrap: wrap;
+}
 .about__results-left {
   padding: 0.9375rem;
+  margin: 0 auto;
+}
+.about__results-left img {
+  max-width: 100%;
 }
 .about__results-right {
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 18.0625rem 18.0625rem;
+  grid-template-columns: 14.375rem 14.375rem;
+}
+@media (max-width: 767px) {
+  .about__results-right {
+    display: grid;
+    grid-template-columns: 18.75rem;
+  }
+}
+@media (min-width: 1200px) {
+  .about__results-right {
+    display: grid;
+    grid-template-columns: 18.0625rem 18.0625rem;
+  }
 }
 
 /*
@@ -454,6 +546,36 @@ figure figcaption.figcaption--blog i {
   grid-template-columns: 21.75rem 21.75rem 21.75rem;
   row-gap: 3.125rem;
   column-gap: 3.125rem;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .blog__grid {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 17.5rem 17.5rem 17.5rem;
+    row-gap: 3.125rem;
+    column-gap: 3.125rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .blog__grid {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 21.75rem 21.75rem;
+    row-gap: 3.125rem;
+    column-gap: 3.125rem;
+  }
+  .blog__grid-item:nth-child(3) {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .blog__grid {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 18.75rem;
+    row-gap: 3.125rem;
+    column-gap: 3.125rem;
+  }
 }
 .blog__grid footer {
   padding: 1.875rem 0;
@@ -496,9 +618,37 @@ figure figcaption.figcaption--blog i {
   column-gap: 3.125rem;
   justify-content: space-between;
 }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .contact__grid {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 12.5rem 15.5625rem 12.5rem 12.5rem;
+    row-gap: 3.125rem;
+    column-gap: 3.125rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .contact__grid {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 20rem 20rem;
+    row-gap: 3.125rem;
+    column-gap: 3.125rem;
+  }
+}
+@media (max-width: 767px) {
+  .contact__grid {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 18.75rem;
+    row-gap: 3.125rem;
+    column-gap: 3.125rem;
+  }
+}
 .contact__grid-item {
   display: flex;
   flex-direction: row;
+  margin: 0 auto;
 }
 .contact__grid-item i {
   font-size: 1.125rem;
@@ -532,6 +682,33 @@ figure figcaption.figcaption--blog i {
   row-gap: 3.125rem;
   column-gap: 3.125rem;
 }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .gallery__grid {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 21.75rem 21.75rem;
+    row-gap: 3.125rem;
+    column-gap: 3.125rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .gallery__grid {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 21.75rem 21.75rem;
+    row-gap: 3.125rem;
+    column-gap: 3.125rem;
+  }
+}
+@media (max-width: 767px) {
+  .gallery__grid {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 18.75rem;
+    row-gap: 3.125rem;
+    column-gap: 3.125rem;
+  }
+}
 
 /*
 *   Products
@@ -545,6 +722,33 @@ figure figcaption.figcaption--blog i {
   grid-template-columns: 15.5625rem 15.5625rem 15.5625rem 15.5625rem;
   row-gap: 3.125rem;
   column-gap: 3.125rem;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .products__grid {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 21.75rem 21.75rem;
+    row-gap: 3.125rem;
+    column-gap: 3.125rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .products__grid {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 20rem 20rem;
+    row-gap: 3.125rem;
+    column-gap: 3.125rem;
+  }
+}
+@media (max-width: 767px) {
+  .products__grid {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 18.75rem;
+    row-gap: 3.125rem;
+    column-gap: 3.125rem;
+  }
 }
 
 /*
@@ -561,6 +765,33 @@ figure figcaption.figcaption--blog i {
   column-gap: 3.125rem;
   justify-content: space-between;
 }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .team__grid {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 12.5rem 12.5rem 12.5rem 12.5rem;
+    row-gap: 3.125rem;
+    column-gap: 3.125rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .team__grid {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 15.625rem 15.625rem;
+    row-gap: 3.125rem;
+    column-gap: 3.125rem;
+  }
+}
+@media (max-width: 767px) {
+  .team__grid {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 18.75rem;
+    row-gap: 3.125rem;
+    column-gap: 3.125rem;
+  }
+}
 
 /*
 *   You said
@@ -568,6 +799,11 @@ figure figcaption.figcaption--blog i {
 */
 .yousaid {
   padding: 5rem 0;
+}
+@media (max-width: 767px) {
+  .yousaid {
+    padding: 5rem 1.25rem;
+  }
 }
 .yousaid__block-quote {
   padding: 1.25rem;
@@ -588,6 +824,21 @@ figure figcaption.figcaption--blog i {
   left: 48.4%;
   bottom: -1.25rem;
   border-top: 1.25rem solid rgba(255, 255, 255, 0.5);
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .yousaid__block-quote::after {
+    left: 48%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .yousaid__block-quote::after {
+    left: 47.4%;
+  }
+}
+@media (max-width: 767px) {
+  .yousaid__block-quote::after {
+    left: 46%;
+  }
 }
 .yousaid__block-quote img {
   position: absolute;

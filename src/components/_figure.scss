@@ -7,9 +7,10 @@ figure {
     text-align: $primary-align;
     display: block;
     position: relative;
-   
+
     &.figure--about {
-        width: toRem(348);
+        width: toRem(300);
+        margin: $mx-auto;
     }
 
     img {
@@ -65,6 +66,7 @@ figure {
             @extend %flex-between;
             padding: toRem(10) 0;
             margin-top: toRem(-7);
+
             h6 {
                 padding-left: toRem(10);
                 font-size: toRem(14);

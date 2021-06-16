@@ -7,6 +7,7 @@
 
     &__introblocks {
         @extend %flex-between;
+        flex-wrap: wrap;
         position: relative;
         margin: toRem(-280) 0 0 0;
         z-index: 1;
@@ -15,18 +16,32 @@
 
     &__results {
         @extend %flex-between;
-
+        flex-wrap: wrap;
+        
         //  Left part of results
-        //   Contains image which includes default border placehoder 
+        //  Contains image which includes default border placehoder 
         &-left {
             padding: toRem(15);
+            margin: $mx-auto;
             @extend %border;
+            
+            img {
+                max-width: 100%;
+            }
+            
         }
 
         //   Right part of results
         //   Contains grid with 2 elements in row
         &-right {
-            @include grid(toRem(289) toRem(289));
+            margin: $mx-auto;
+            @include grid(toRem(230) toRem(230));
+            @include breakpoint(sm) {
+                @include grid(toRem(300)); 
+            }
+            @include breakpoint(xl) {
+                @include grid(toRem(289) toRem(289));
+            }
         }
     }
 }

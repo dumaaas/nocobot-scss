@@ -12,10 +12,32 @@
         & li {
             float: $secondary-align;
             margin-top: toRem(20);
+
+            @include breakpoint(sm) {
+                margin-top: toRem(15);
+            }
         }
     }
 
     &__right {
+
+        ul {
+            &.small {
+                display: none;
+            }
+
+            @include breakpoint(sm) {
+                &.big {
+                    display: none;
+                }
+                &.small {
+                    display: block;
+                    float: $tertiary-align;
+                    padding: toRem(20) 0;
+                    font-size: toRem(30);
+                }
+            }
+        }
         li {
             float: $tertiary-align;
             text-transform: $primary-transform;
@@ -34,5 +56,8 @@
                 margin-right: 0;
             }
         }
+       
     }
+
+    
 }
