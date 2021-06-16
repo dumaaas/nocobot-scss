@@ -1,14 +1,19 @@
 @charset "UTF-8";
+
 /*
 *   Placeholders
 */
-.blog__grid footer, .about__results, .about__introblocks, figure figcaption.figcaption--blog {
+.blog__grid footer,
+.about__results,
+.about__introblocks,
+figure figcaption.figcaption--blog {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.about__results-left, hr {
+.about__results-left,
+hr {
   border-width: 0.5px;
   border-style: solid;
   border-color: #bebebe;
@@ -109,22 +114,27 @@ div {
 .header ul li {
   margin-right: 0.9375rem;
 }
+
 .header__left li {
   float: left;
   margin-top: 1.25rem;
 }
+
 @media (max-width: 767px) {
   .header__left li {
     margin-top: 0.9375rem;
   }
 }
+
 .header__right ul.small {
   display: none;
 }
+
 @media (max-width: 767px) {
   .header__right ul.big {
     display: none;
   }
+
   .header__right ul.small {
     display: block;
     float: right;
@@ -132,18 +142,22 @@ div {
     font-size: 1.875rem;
   }
 }
+
 .header__right li {
   float: right;
   text-transform: uppercase;
   font-size: 0.9rem;
 }
+
 .header__right li a {
   display: block;
   padding: 1.875rem 0;
 }
+
 .header__right li a:hover {
   color: #B946AD;
 }
+
 .header__right li:nth-child(1) {
   margin-right: 0;
 }
@@ -157,25 +171,31 @@ div {
   font-size: 0.8rem;
   text-transform: uppercase;
 }
+
 .topbar i {
   line-height: normal;
 }
+
 .topbar ul li {
   margin-right: 0.9375rem;
   display: inline-block;
 }
+
 .topbar__left li {
   float: left;
   font-size: 0.7rem;
 }
+
 .topbar__left i {
   margin-right: 0.3125rem;
 }
+
 .topbar__right-icon {
   float: right;
   font-size: 1rem;
   color: #B946AD;
 }
+
 .topbar__right li:nth-child(1) {
   margin-right: 0;
 }
@@ -185,6 +205,7 @@ div {
     display: none !important;
   }
 }
+
 /*
 *   Container 
 */
@@ -194,16 +215,19 @@ div {
   max-width: 71.25rem;
   padding: 0 1.25rem;
 }
+
 @media (min-width: 992px) and (max-width: 1199px) {
   .hoc {
     max-width: 60.625rem;
   }
 }
+
 @media (min-width: 768px) and (max-width: 991px) {
   .hoc {
     max-width: 46.875rem;
   }
 }
+
 @media (max-width: 767px) {
   .hoc {
     max-width: 43.75rem;
@@ -232,12 +256,15 @@ div {
   word-wrap: break-word;
   color: #fff;
 }
+
 .wrapper.row0 {
   background-color: #161C21;
 }
+
 .wrapper.row1 {
   background-color: rgba(0, 0, 0, 0.75);
 }
+
 .wrapper.row3 {
   background-color: #fff;
   color: #474747;
@@ -253,6 +280,7 @@ div {
   position: relative;
   z-index: 1;
 }
+
 .overlay::after {
   display: block;
   position: absolute;
@@ -278,6 +306,7 @@ div {
   padding: 0.625rem;
   color: #D7D7D7;
 }
+
 .footer i {
   color: #A61B19;
 }
@@ -298,12 +327,15 @@ div {
   background-color: #B946AD;
   color: #fff;
 }
+
 .btn:hover {
   background-color: transparent;
 }
+
 .btn.btn-primary:hover {
   border-color: #fff;
 }
+
 .btn.btn-secondary:hover {
   border-color: #B946AD;
   color: #B946AD;
@@ -313,11 +345,13 @@ div {
   text-align: center;
   padding-bottom: 5rem;
 }
+
 .title .heading {
   display: inline-block;
   position: relative;
   padding: 0px 0px 0.9375rem;
 }
+
 .title .heading::after {
   content: "";
   position: absolute;
@@ -326,6 +360,7 @@ div {
   border-bottom: 2px solid #B946AD;
   width: 100%;
 }
+
 .title.title--black {
   color: #000;
 }
@@ -339,17 +374,21 @@ figure {
   display: block;
   position: relative;
 }
+
 figure.figure--about {
   width: 18.75rem;
   margin: 0 auto;
 }
+
 figure img {
   width: 100%;
 }
+
 figure h6 {
   font-weight: 700;
   line-height: 1;
 }
+
 figure figcaption {
   width: 100%;
   color: #fff;
@@ -357,20 +396,25 @@ figure figcaption {
   max-height: 3.125rem;
   overflow: hidden;
 }
+
 figure figcaption.figcaption--about {
   position: absolute;
   bottom: 0.375rem;
   stroke-opacity: 0.55;
 }
+
 figure figcaption.figcaption--about h6 {
   padding: 0.875rem 0;
 }
+
 figure figcaption.figcaption--about p {
   padding: 0 0.875rem 0.875rem;
 }
+
 figure figcaption.figcaption--about:hover {
   max-height: 100%;
 }
+
 figure figcaption.figcaption--team {
   background-color: #fff;
   color: #000;
@@ -378,22 +422,27 @@ figure figcaption.figcaption--team {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   padding: 0.9375rem 0;
 }
+
 figure figcaption.figcaption--team p {
   padding-top: 0.46875rem;
 }
+
 figure figcaption.figcaption--blog {
   padding: 0.625rem 0;
   margin-top: -0.4375rem;
 }
+
 figure figcaption.figcaption--blog h6 {
   padding-left: 0.625rem;
   font-size: 0.875rem;
   line-height: 1.625rem;
 }
+
 figure figcaption.figcaption--blog span {
   padding-right: 0.625rem;
   font-size: 0.75rem;
 }
+
 figure figcaption.figcaption--blog i {
   margin-right: 0.3125rem;
 }
@@ -403,14 +452,17 @@ figure figcaption.figcaption--blog i {
   padding: 1.5625rem;
   margin: 0 auto;
 }
+
 @media (min-width: 1200px) {
   .card {
     width: 15rem;
   }
 }
+
 .card:hover {
   box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
 }
+
 .card h6 {
   color: #B946AD;
   letter-spacing: 0.0125rem;
@@ -420,6 +472,7 @@ figure figcaption.figcaption--blog i {
 .image-item img {
   width: 100%;
 }
+
 .image-item span.img-overlay {
   background: #B946AD;
   opacity: 0.4;
@@ -429,6 +482,7 @@ figure figcaption.figcaption--blog i {
   top: 0;
   position: absolute;
 }
+
 .image-item span.img-overlay::after {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -442,6 +496,7 @@ figure figcaption.figcaption--blog i {
   position: relative;
   text-align: center;
 }
+
 .image-item:hover span.img-overlay {
   display: block;
   cursor: pointer;
@@ -454,40 +509,48 @@ figure figcaption.figcaption--blog i {
 .pageintro {
   padding: 12.5rem 0 25rem;
 }
+
 @media (max-width: 767px) {
   .pageintro {
     padding: 6.25rem 0 18.75rem;
   }
 }
+
 @media (min-width: 768px) and (max-width: 991px) {
   .pageintro {
     padding: 9.375rem 0 21.875rem;
   }
 }
+
 .pageintro article {
   display: block;
   max-width: 75%;
   margin: 0 auto;
   text-align: center;
 }
+
 .pageintro article h3 {
   margin-bottom: 1.25rem;
 }
+
 @media (max-width: 767px) {
   .pageintro article span {
     display: none;
   }
 }
+
 @media (min-width: 768px) and (max-width: 991px) {
   .pageintro article span {
     display: none;
   }
 }
+
 .pageintro article p {
   max-width: 65%;
   line-height: 2rem;
   margin: 0 auto;
 }
+
 .pageintro article footer {
   margin-top: 3.125rem;
 }
@@ -499,6 +562,7 @@ figure figcaption.figcaption--blog i {
 .about {
   padding: 80px 0;
 }
+
 .about__introblocks {
   flex-wrap: wrap;
   position: relative;
@@ -506,27 +570,33 @@ figure figcaption.figcaption--blog i {
   z-index: 1;
   text-align: center;
 }
+
 .about__results {
   flex-wrap: wrap;
 }
+
 .about__results-left {
   padding: 0.9375rem;
   margin: 0 auto;
 }
+
 .about__results-left img {
   max-width: 100%;
 }
+
 .about__results-right {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 14.375rem 14.375rem;
 }
+
 @media (max-width: 767px) {
   .about__results-right {
     display: grid;
     grid-template-columns: 18.75rem;
   }
 }
+
 @media (min-width: 1200px) {
   .about__results-right {
     display: grid;
@@ -541,12 +611,14 @@ figure figcaption.figcaption--blog i {
 .blog {
   padding: 5rem 0;
 }
+
 .blog__grid {
   display: grid;
   grid-template-columns: 21.75rem 21.75rem 21.75rem;
   row-gap: 3.125rem;
   column-gap: 3.125rem;
 }
+
 @media (min-width: 992px) and (max-width: 1199px) {
   .blog__grid {
     justify-content: center;
@@ -556,6 +628,7 @@ figure figcaption.figcaption--blog i {
     column-gap: 3.125rem;
   }
 }
+
 @media (min-width: 768px) and (max-width: 991px) {
   .blog__grid {
     justify-content: center;
@@ -564,10 +637,12 @@ figure figcaption.figcaption--blog i {
     row-gap: 3.125rem;
     column-gap: 3.125rem;
   }
+
   .blog__grid-item:nth-child(3) {
     display: none;
   }
 }
+
 @media (max-width: 767px) {
   .blog__grid {
     justify-content: center;
@@ -577,29 +652,36 @@ figure figcaption.figcaption--blog i {
     column-gap: 3.125rem;
   }
 }
+
 .blog__grid footer {
   padding: 1.875rem 0;
 }
+
 .blog__grid footer .date {
   padding: 0.625rem 0.9375rem;
   text-align: center;
   background-color: #D7D7D7;
   height: fit-content;
 }
+
 .blog__grid footer .date p {
   color: #717171;
   font-weight: 700;
   font-size: 1.25rem;
 }
+
 .blog__grid footer .date hr {
   margin: 0.625rem 0;
 }
+
 .blog__grid footer .description {
   padding-left: 0.625rem;
 }
+
 .blog__grid footer .description h6 {
   color: black;
 }
+
 .blog__grid footer .description p {
   margin-top: 0.625rem;
 }
@@ -611,6 +693,7 @@ figure figcaption.figcaption--blog i {
 .contact {
   padding: 80px 0;
 }
+
 .contact__grid {
   display: grid;
   grid-template-columns: 15.5625rem 15.5625rem 15.5625rem 15.5625rem;
@@ -618,6 +701,7 @@ figure figcaption.figcaption--blog i {
   column-gap: 3.125rem;
   justify-content: space-between;
 }
+
 @media (min-width: 992px) and (max-width: 1199px) {
   .contact__grid {
     justify-content: center;
@@ -627,6 +711,7 @@ figure figcaption.figcaption--blog i {
     column-gap: 3.125rem;
   }
 }
+
 @media (min-width: 768px) and (max-width: 991px) {
   .contact__grid {
     justify-content: center;
@@ -636,6 +721,7 @@ figure figcaption.figcaption--blog i {
     column-gap: 3.125rem;
   }
 }
+
 @media (max-width: 767px) {
   .contact__grid {
     justify-content: center;
@@ -645,11 +731,13 @@ figure figcaption.figcaption--blog i {
     column-gap: 3.125rem;
   }
 }
+
 .contact__grid-item {
   display: flex;
   flex-direction: row;
   margin: 0 auto;
 }
+
 .contact__grid-item i {
   font-size: 1.125rem;
   border-width: 1px;
@@ -659,12 +747,14 @@ figure figcaption.figcaption--blog i {
   color: #D099D5;
   padding: 0.9375rem;
 }
+
 .contact__grid-item-content {
   padding: 0.3125rem 0 0 1.25rem;
   display: flex;
   flex-direction: column;
   color: #fff;
 }
+
 .contact__grid-item-content p {
   font-weight: 700;
 }
@@ -676,12 +766,14 @@ figure figcaption.figcaption--blog i {
 .gallery {
   padding: 5rem 0;
 }
+
 .gallery__grid {
   display: grid;
   grid-template-columns: 21.75rem 21.75rem 21.75rem;
   row-gap: 3.125rem;
   column-gap: 3.125rem;
 }
+
 @media (min-width: 992px) and (max-width: 1199px) {
   .gallery__grid {
     justify-content: center;
@@ -691,6 +783,7 @@ figure figcaption.figcaption--blog i {
     column-gap: 3.125rem;
   }
 }
+
 @media (min-width: 768px) and (max-width: 991px) {
   .gallery__grid {
     justify-content: center;
@@ -700,6 +793,7 @@ figure figcaption.figcaption--blog i {
     column-gap: 3.125rem;
   }
 }
+
 @media (max-width: 767px) {
   .gallery__grid {
     justify-content: center;
@@ -717,12 +811,14 @@ figure figcaption.figcaption--blog i {
 .products {
   padding: 80px 0;
 }
+
 .products__grid {
   display: grid;
   grid-template-columns: 15.5625rem 15.5625rem 15.5625rem 15.5625rem;
   row-gap: 3.125rem;
   column-gap: 3.125rem;
 }
+
 @media (min-width: 992px) and (max-width: 1199px) {
   .products__grid {
     justify-content: center;
@@ -732,6 +828,7 @@ figure figcaption.figcaption--blog i {
     column-gap: 3.125rem;
   }
 }
+
 @media (min-width: 768px) and (max-width: 991px) {
   .products__grid {
     justify-content: center;
@@ -741,6 +838,7 @@ figure figcaption.figcaption--blog i {
     column-gap: 3.125rem;
   }
 }
+
 @media (max-width: 767px) {
   .products__grid {
     justify-content: center;
@@ -758,6 +856,7 @@ figure figcaption.figcaption--blog i {
 .team {
   padding: 80px 0;
 }
+
 .team__grid {
   display: grid;
   grid-template-columns: 15.625rem 15.625rem 15.625rem 15.625rem;
@@ -765,6 +864,7 @@ figure figcaption.figcaption--blog i {
   column-gap: 3.125rem;
   justify-content: space-between;
 }
+
 @media (min-width: 992px) and (max-width: 1199px) {
   .team__grid {
     justify-content: center;
@@ -774,6 +874,7 @@ figure figcaption.figcaption--blog i {
     column-gap: 3.125rem;
   }
 }
+
 @media (min-width: 768px) and (max-width: 991px) {
   .team__grid {
     justify-content: center;
@@ -783,6 +884,7 @@ figure figcaption.figcaption--blog i {
     column-gap: 3.125rem;
   }
 }
+
 @media (max-width: 767px) {
   .team__grid {
     justify-content: center;
@@ -800,11 +902,13 @@ figure figcaption.figcaption--blog i {
 .yousaid {
   padding: 5rem 0;
 }
+
 @media (max-width: 767px) {
   .yousaid {
     padding: 5rem 1.25rem;
   }
 }
+
 .yousaid__block-quote {
   padding: 1.25rem;
   border-radius: 0.625rem;
@@ -814,6 +918,7 @@ figure figcaption.figcaption--blog i {
   line-height: 2rem;
   position: relative;
 }
+
 .yousaid__block-quote::after {
   content: "";
   position: absolute;
@@ -825,21 +930,25 @@ figure figcaption.figcaption--blog i {
   bottom: -1.25rem;
   border-top: 1.25rem solid rgba(255, 255, 255, 0.5);
 }
+
 @media (min-width: 992px) and (max-width: 1199px) {
   .yousaid__block-quote::after {
     left: 48%;
   }
 }
+
 @media (min-width: 768px) and (max-width: 991px) {
   .yousaid__block-quote::after {
     left: 47.4%;
   }
 }
+
 @media (max-width: 767px) {
   .yousaid__block-quote::after {
     left: 46%;
   }
 }
+
 .yousaid__block-quote img {
   position: absolute;
   left: 1.25rem;
@@ -848,31 +957,38 @@ figure figcaption.figcaption--blog i {
   height: 3.75rem;
   z-index: -1;
 }
+
 .yousaid__block-quote img:nth-child(2) {
   left: 5rem;
 }
+
 .yousaid__block-user {
   padding-top: 3.125rem;
   width: 100%;
   text-align: center;
 }
+
 .yousaid__block-user img,
 .yousaid__block-user p,
 .yousaid__block-user span {
   display: block;
   margin: 0 auto;
 }
+
 .yousaid__block-user img {
   border-radius: 3.125rem;
 }
+
 .yousaid__block-user p {
   padding-top: 0.625rem;
   font-size: 1.125rem;
   font-weight: 600;
 }
+
 .yousaid__block-user span {
   font-style: italic;
 }
+
 .yousaid__block-user a {
   margin-top: 3.125rem;
 }
