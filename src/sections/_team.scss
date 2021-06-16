@@ -5,47 +5,9 @@
 .team {
     padding: 80px 0;
 
-    .gallery__title h2 {
-        color: $black;
-    }
-
     //  Team grid
     //  Contains grid with 4 items in row
     &__grid {
-        @include grid(toRem(250) toRem(250) toRem(250) toRem(250), toRem(50), toRem(50));
-
-        //  Item
-        //  Item is contained of img and figcaption
-        &-item {
-            width: 100%;
-            text-align: $primary-align;
-            display: block;
-            position: relative;
-
-            //  Image style
-            img {
-                width: toRem(250);
-            }
-
-            //  Figcaption 
-            //  Contains heading (user name) + paragraph (occupation)
-            figcaption {
-                width: 100%;
-                color: $black;
-                margin-top: toRem(-6);
-                box-shadow: $caption-shadow;
-
-                h6 {
-                    padding: toRem(30) 0 0;
-                    font-weight: 700;
-                    line-height: 1;
-                    color: $black;
-                }
-
-                p {
-                    padding: toRem(5) 0 toRem(30);
-                }
-            }
-        }
+        @include grid(toRem(250) toRem(250) toRem(250) toRem(250), toRem(50), toRem(50), space-between);
     }
 }

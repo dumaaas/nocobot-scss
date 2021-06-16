@@ -5,19 +5,6 @@
 .gallery {
     padding: toRem(80) 0;
 
-    //   Gallery title
-    //   Style for title of gallery
-    &__title {
-        text-align: $primary-align;
-        padding-bottom: toRem(80);
-
-        .heading {
-            display: inline-block;
-            position: relative;
-            padding: 0px 0px toRem(15);
-        }
-    }
-
     //   Gallery grid
     //   Contains grid with 3 elements in row
     &__grid {

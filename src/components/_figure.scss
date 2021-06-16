@@ -1,35 +1,81 @@
+/*
+*   Style for figure component and its modifiers
+*/
+
 figure {
-    width: toRem(348);
+    width: 100%;
     text-align: $primary-align;
     display: block;
     position: relative;
 
+    img {
+        width: 100%;
+    }
+
+    h6 {
+        font-weight: 700;
+        line-height: 1;
+    }
+
     figcaption {
-        position: absolute;
-        bottom: toRem(6);
         width: 100%;
         color: $white;
-        background-color: rgba(0, 0, 0, .55);
+        background-color: $black;
         max-height: toRem(50);
         overflow: hidden;
 
-        h6 {
-            padding: toRem(14) 0;
-            font-weight: 700;
-            line-height: 1;
-        }
 
-        //  Hidden text in figcaption
-        div {
+        &.figcaption--about {
+            position: absolute;
+            bottom: toRem(6);
+            stroke-opacity: .55;
+
+            h6 {
+                padding: toRem(14) 0;
+            }
+
+            //  Hidden text in figcaption
             p {
                 padding: 0 toRem(14) toRem(14);
             }
+
+            //   Hover over figcaption
+            //   Show hidden text 
+            &:hover {
+                max-height: 100%;
+            }
         }
 
-        //   Hover over figcaption
-        //   Show hidden text 
-        &:hover {
-            max-height: 100%;
+        &.figcaption--team {
+            background-color: $white;
+            color: $black;
+            margin-top: toRem(-6);
+            box-shadow: $caption-shadow;
+            padding: toRem(15) 0;
+
+            p {
+                padding-top: toRem(7.5);
+            }
+        }
+
+        &.figcaption--blog {
+            @extend %flex-between;
+            padding: toRem(10) 0;
+            margin-top: toRem(-7);
+            h6 {
+                padding-left: toRem(10);
+                font-size: toRem(14);
+                line-height: toRem(26);
+            }
+
+            span {
+                padding-right: toRem(10);
+                font-size: toRem(12);
+            }
+
+            i {
+                margin-right: toRem(5);
+            }
         }
     }
 }
