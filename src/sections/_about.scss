@@ -63,23 +63,6 @@
         //   Contains grid with 2 elements in row
         &-right {
             @include grid(toRem(289) toRem(289));
-
-            .card {
-                width: toRem(240);
-                padding: toRem(25);
-
-                //   Card hover
-                //   On card hover we apply box-shadow style
-                &:hover {
-                    box-shadow: $resultsCard-shadow;
-                }
-
-                h6 {
-                    color: $dark-pink;
-                    letter-spacing: toRem(0.2);
-                    padding-bottom: toRem(10);
-                }
-            }
         }
     }
 }

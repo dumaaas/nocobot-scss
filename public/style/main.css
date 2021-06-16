@@ -353,6 +353,19 @@ figure figcaption.figcaption--blog i {
   margin-right: 0.3125rem;
 }
 
+.card {
+  width: 15rem;
+  padding: 1.5625rem;
+}
+.card:hover {
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+}
+.card h6 {
+  color: #B946AD;
+  letter-spacing: 0.0125rem;
+  padding-bottom: 0.625rem;
+}
+
 /*
 *   Pageintro
 *   Style for class pageintro and its child elements
@@ -423,18 +436,6 @@ figure figcaption.figcaption--blog i {
 .about__results-right {
   display: grid;
   grid-template-columns: 18.0625rem 18.0625rem;
-}
-.about__results-right .card {
-  width: 15rem;
-  padding: 1.5625rem;
-}
-.about__results-right .card:hover {
-  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
-}
-.about__results-right .card h6 {
-  color: #B946AD;
-  letter-spacing: 0.0125rem;
-  padding-bottom: 0.625rem;
 }
 
 /*
