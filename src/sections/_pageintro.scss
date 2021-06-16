@@ -1,0 +1,28 @@
+/*
+*   Pageintro
+*   Style for class pageintro and its child elements
+*/
+.pageintro {
+    padding: toRem(200) 0 toRem(400);
+
+    & article {
+        display: block;
+        max-width: 75%;
+        margin: $mx-auto;
+        text-align: $primary-align;
+
+        h3 {
+            margin-bottom: toRem(20);
+        }
+
+        p {
+            max-width: 65%;
+            line-height: toRem(32);
+            margin: $mx-auto;
+        }
+
+        footer {
+            margin-top: toRem(50);
+        }
+    }
+}

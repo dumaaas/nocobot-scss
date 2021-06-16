@@ -1,0 +1,14 @@
+/*
+*   Footer
+*   Style for class footer and its child elements
+*/
+.footer {
+    @include flex($primary-direction, space-between);
+
+    padding: toRem(10) 0;
+    color: $light-gray;
+
+    i {
+        color: $dark-red;
+    }
+}

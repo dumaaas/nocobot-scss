@@ -1,0 +1,43 @@
+/*
+*   Topbar
+*   Style for class topbard and its child elements
+*/
+.topbar {
+    padding: toRem(20) 0;
+    font-size: toRem(12.8);
+    text-transform: $primary-transform;
+
+    i {
+        line-height: normal;
+    }
+
+    ul li {
+        margin-right: toRem(15);
+        display: inline-block;
+    }
+
+    &__left {
+        li {
+            float: $secondary-align;
+            font-size: toRem(11.2);
+        }
+
+        i {
+            margin-right: toRem(5);
+        }
+    }
+
+    &__right {
+
+        &-icon {
+            float: $tertiary-align;
+            font-size: toRem(16);
+            color: $dark-pink;
+        }
+
+        li:nth-child(1) {
+            margin-right: 0;
+        }
+
+    }
+}

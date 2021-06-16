@@ -1,0 +1,35 @@
+/*
+*   Button
+*   Example of BEM Elements/Modifers
+*/
+
+.btn {
+    @include border(1px, solid, transparent, 10px);
+    display: inline-block;
+    text-transform: $primary-transform;
+    padding: toRem(8) toRem(18) toRem(10);
+    letter-spacing: ls(button);
+    background-color: $dark-pink;
+    color: $white;
+
+    //   Hover btn
+    //   Style that applies when btn is hovered
+    &:hover {
+        background-color: transparent;
+    }
+
+    //   Modifers
+    //   Classes that are use to modify main class
+    &.btn-primary {
+        &:hover {
+            border-color: $white;
+        }
+    }
+
+    &.btn-secondary {
+        &:hover {
+            border-color: $dark-pink;
+            color: $dark-pink;
+        }
+    }
+}

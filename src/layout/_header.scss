@@ -1,0 +1,38 @@
+/*
+*   Header
+*   Style for class header and its child elements
+*/
+.header {
+
+    ul li {
+        margin-right: toRem(15);
+    }
+
+    &__left {
+        & li {
+            float: $secondary-align;
+            margin-top: toRem(20);
+        }
+    }
+
+    &__right {
+        li {
+            float: $tertiary-align;
+            text-transform: $primary-transform;
+            font-size: toRem(14.4);
+
+            a {
+                display: block;
+                padding: toRem(30) 0;
+
+                &:hover {
+                    color: $dark-pink;
+                }
+            }
+
+            &:nth-child(1) {
+                margin-right: 0;
+            }
+        }
+    }
+}

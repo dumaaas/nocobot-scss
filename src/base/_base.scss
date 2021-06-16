@@ -1,0 +1,38 @@
+/*
+*   Base style
+*/
+body {
+    @include font-style($fontSize: toRem(16));
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+/*
+*   Transition
+*   Default transition for all elements and pseudo-elements
+*/
+*,
+*::before,
+*::after {
+    transition: all .3s ease-in-out;
+}
+
+/*
+*   Extend (placeholders)
+*   Example of extending placeholder that is same for more classes
+*/
+hr {
+    margin: toRem(80) 0;
+    @extend %border;
+}
+
+
+
+div {
+    position: relative;
+}

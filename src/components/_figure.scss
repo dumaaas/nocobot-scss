@@ -1,0 +1,35 @@
+figure {
+    width: toRem(348);
+    text-align: $primary-align;
+    display: block;
+    position: relative;
+
+    figcaption {
+        position: absolute;
+        bottom: toRem(6);
+        width: 100%;
+        color: $white;
+        background-color: rgba(0, 0, 0, .55);
+        max-height: toRem(50);
+        overflow: hidden;
+
+        h6 {
+            padding: toRem(14) 0;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        //  Hidden text in figcaption
+        div {
+            p {
+                padding: 0 toRem(14) toRem(14);
+            }
+        }
+
+        //   Hover over figcaption
+        //   Show hidden text 
+        &:hover {
+            max-height: 100%;
+        }
+    }
+}

@@ -1,0 +1,85 @@
+/*
+*   About
+*   Style for class about and its child elements
+*/
+.about {
+    padding: 80px 0;
+
+    &__introblocks {
+        @extend %flex-between;
+        position: relative;
+        margin: toRem(-280) 0 0 0;
+        z-index: 1;
+        text-align: $primary-align;
+
+        figure {
+            width: toRem(348);
+            text-align: $primary-align;
+            display: block;
+            position: relative;
+
+            figcaption {
+                position: absolute;
+                bottom: toRem(6);
+                width: 100%;
+                color: $white;
+                background-color: rgba(0, 0, 0, .55);
+                max-height: toRem(50);
+                overflow: hidden;
+
+                h6 {
+                    padding: toRem(14) 0;
+                    font-weight: 700;
+                    line-height: 1;
+                }
+
+                //  Hidden text in figcaption
+                div {
+                    p {
+                        padding: 0 toRem(14) toRem(14);
+                    }
+                }
+
+                //   Hover over figcaption
+                //   Show hidden text 
+                &:hover {
+                    max-height: 100%;
+                }
+            }
+        }
+    }
+
+    &__results {
+        @extend %flex-between;
+
+        //  Left part of results
+        //   Contains image which includes default border placehoder 
+        &-left {
+            padding: toRem(15);
+            @extend %border;
+        }
+
+        //   Right part of results
+        //   Contains grid with 2 elements in row
+        &-right {
+            @include grid(toRem(289) toRem(289));
+
+            .card {
+                width: toRem(240);
+                padding: toRem(25);
+
+                //   Card hover
+                //   On card hover we apply box-shadow style
+                &:hover {
+                    box-shadow: $resultsCard-shadow;
+                }
+
+                h6 {
+                    color: $dark-pink;
+                    letter-spacing: toRem(0.2);
+                    padding-bottom: toRem(10);
+                }
+            }
+        }
+    }
+}
