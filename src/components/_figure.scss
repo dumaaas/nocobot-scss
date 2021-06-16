@@ -7,6 +7,10 @@ figure {
     text-align: $primary-align;
     display: block;
     position: relative;
+   
+    &.figure--about {
+        width: toRem(348);
+    }
 
     img {
         width: 100%;
@@ -23,7 +27,6 @@ figure {
         background-color: $black;
         max-height: toRem(50);
         overflow: hidden;
-
 
         &.figcaption--about {
             position: absolute;

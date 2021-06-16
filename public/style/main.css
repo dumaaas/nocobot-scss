@@ -298,6 +298,9 @@ figure {
   display: block;
   position: relative;
 }
+figure.figure--about {
+  width: 21.75rem;
+}
 figure img {
   width: 100%;
 }
@@ -366,6 +369,33 @@ figure figcaption.figcaption--blog i {
   padding-bottom: 0.625rem;
 }
 
+.image-item span.img-overlay {
+  background: #B946AD;
+  opacity: 0.4;
+  display: none;
+  height: calc(100% - 6px);
+  width: 100%;
+  top: 0;
+  position: absolute;
+}
+.image-item span.img-overlay::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";
+  color: #fff !important;
+  opacity: 1 !important;
+  font-size: 2.5rem;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -45%);
+  position: relative;
+  text-align: center;
+}
+.image-item:hover span.img-overlay {
+  display: block;
+  cursor: pointer;
+}
+
 /*
 *   Pageintro
 *   Style for class pageintro and its child elements
@@ -403,32 +433,6 @@ figure figcaption.figcaption--blog i {
   margin: -17.5rem 0 0 0;
   z-index: 1;
   text-align: center;
-}
-.about__introblocks figure {
-  width: 21.75rem;
-  text-align: center;
-  display: block;
-  position: relative;
-}
-.about__introblocks figure figcaption {
-  position: absolute;
-  bottom: 0.375rem;
-  width: 100%;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.55);
-  max-height: 3.125rem;
-  overflow: hidden;
-}
-.about__introblocks figure figcaption h6 {
-  padding: 0.875rem 0;
-  font-weight: 700;
-  line-height: 1;
-}
-.about__introblocks figure figcaption div p {
-  padding: 0 0.875rem 0.875rem;
-}
-.about__introblocks figure figcaption:hover {
-  max-height: 100%;
 }
 .about__results-left {
   padding: 0.9375rem;
@@ -527,32 +531,6 @@ figure figcaption.figcaption--blog i {
   grid-template-columns: 21.75rem 21.75rem 21.75rem;
   row-gap: 3.125rem;
   column-gap: 3.125rem;
-}
-.gallery__grid-item span.img-overlay {
-  background: #B946AD;
-  opacity: 0.4;
-  display: none;
-  height: calc(100% - 6px);
-  width: 100%;
-  top: 0;
-  position: absolute;
-}
-.gallery__grid-item span.img-overlay::after {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "";
-  color: #fff !important;
-  opacity: 1 !important;
-  font-size: 2.5rem;
-  top: 50%;
-  left: 45%;
-  transform: translate(-50%, -45%);
-  position: relative;
-  text-align: center;
-}
-.gallery__grid-item:hover span.img-overlay {
-  display: block;
-  cursor: pointer;
 }
 
 /*
