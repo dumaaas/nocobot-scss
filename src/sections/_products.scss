@@ -1,0 +1,28 @@
+/*
+*   Products
+*   Style for class products and its child elements
+*/
+.products {
+    padding: 80px 0;
+
+    //  Products grid
+    //  Contains grid with 4 items in row
+    &__grid {
+        @include grid(toRem(249) toRem(249) toRem(249) toRem(249), toRem(50), toRem(50));
+        
+        @include breakpoint(lg) {
+            justify-content: center;
+            @include grid(toRem(348) toRem(348), toRem(50), toRem(50));
+        }
+
+        @include breakpoint(md) {
+            justify-content: center;
+            @include grid(toRem(320) toRem(320), toRem(50), toRem(50));
+        }
+
+        @include breakpoint(sm) {
+            justify-content: center;
+            @include grid(toRem(300), toRem(50), toRem(50));
+        }
+    }
+}

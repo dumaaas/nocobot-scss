@@ -1,0 +1,47 @@
+/*
+*   About
+*   Style for class about and its child elements
+*/
+.about {
+    padding: 80px 0;
+
+    &__introblocks {
+        @extend %flex-between;
+        flex-wrap: wrap;
+        position: relative;
+        margin: toRem(-280) 0 0 0;
+        z-index: 1;
+        text-align: $primary-align;
+    }
+
+    &__results {
+        @extend %flex-between;
+        flex-wrap: wrap;
+        
+        //  Left part of results
+        //  Contains image which includes default border placehoder 
+        &-left {
+            padding: toRem(15);
+            margin: $mx-auto;
+            @extend %border;
+            
+            img {
+                max-width: 100%;
+            }
+            
+        }
+
+        //   Right part of results
+        //   Contains grid with 2 elements in row
+        &-right {
+            margin: $mx-auto;
+            @include grid(toRem(230) toRem(230));
+            @include breakpoint(sm) {
+                @include grid(toRem(300)); 
+            }
+            @include breakpoint(xl) {
+                @include grid(toRem(289) toRem(289));
+            }
+        }
+    }
+}

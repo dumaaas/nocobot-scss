@@ -1,0 +1,63 @@
+/*
+*   Header
+*   Style for class header and its child elements
+*/
+.header {
+
+    ul li {
+        margin-right: toRem(15);
+    }
+
+    &__left {
+        & li {
+            float: $secondary-align;
+            margin-top: toRem(20);
+
+            @include breakpoint(sm) {
+                margin-top: toRem(15);
+            }
+        }
+    }
+
+    &__right {
+
+        ul {
+            &.small {
+                display: none;
+            }
+
+            @include breakpoint(sm) {
+                &.big {
+                    display: none;
+                }
+                &.small {
+                    display: block;
+                    float: $tertiary-align;
+                    padding: toRem(20) 0;
+                    font-size: toRem(30);
+                }
+            }
+        }
+        li {
+            float: $tertiary-align;
+            text-transform: $primary-transform;
+            font-size: toRem(14.4);
+
+            a {
+                display: block;
+                padding: toRem(30) 0;
+
+                &:hover {
+                    color: $dark-pink;
+                }
+            }
+
+            &:nth-child(1) {
+                margin-right: 0;
+            }
+        }
+       
+    }
+
+    
+}

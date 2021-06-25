@@ -1,0 +1,99 @@
+/*
+*   You said
+*   Style for class yousaid and its child elements
+*/
+.yousaid {
+    padding: toRem(80) 0;
+
+    @include breakpoint(sm) {
+        padding: toRem(80) toRem(20);
+    }
+
+    // Block 
+    &__block {
+        //  Quote of block
+        //  Contains sentence which appears in cloud
+        &-quote {
+            padding: toRem(20);
+            border-radius: toRem(10);
+            background-color: rgba(255, 255, 255, .5);
+            text-align: $primary-align;
+            font-size: toRem(20);
+            line-height: toRem(32);
+            position: relative;
+
+            // Quote 
+            &::after {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-left: toRem(20) solid transparent;
+                border-right: toRem(20) solid transparent;
+                left: 48.4%;
+                bottom: toRem(-20);
+                border-top: toRem(20) solid rgba(255, 255, 255, .5);
+                @include breakpoint(lg) {
+                    left: 48%;
+                }
+                @include breakpoint(md) {
+                    left: 47.4%;
+                }
+                @include breakpoint(sm) {
+                    left: 46%;
+                }
+            }
+            
+            // Apostrophe images
+            img {
+                position: absolute;
+                left: toRem(20);
+                top: toRem(20);
+                width: toRem(50);
+                height: toRem(60);
+                z-index: -1;
+            }
+
+            img:nth-child(2) {
+                left: toRem(80);
+            }
+        }
+
+        //  User part of quote
+        &-user {
+            padding-top: toRem(50);
+            width: 100%;
+            text-align: $primary-align;
+
+            img,
+            p,
+            span {
+                display: block;
+                margin: $mx-auto;
+            }
+
+            //  User image
+            img {
+                border-radius: toRem(50);
+            }
+
+            //  User name
+            p {
+                padding-top: toRem(10);
+                font-size: toRem(18);
+                font-weight: 600;
+            }
+
+            // User occupation
+            span {
+                font-style: italic;
+            }
+
+
+            // Read more button
+            a {
+                margin-top: toRem(50);
+            }
+        }
+    }
+}

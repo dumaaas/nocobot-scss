@@ -1,0 +1,25 @@
+//   Title of sections
+//   Style for title of sections
+.title {
+    text-align: $primary-align;
+    padding-bottom: toRem(80);
+
+    .heading {
+        display: inline-block;
+        position: relative;
+        padding: 0px 0px toRem(15);
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            border-bottom: 2px solid $dark-pink;
+            width: 100%;
+        }
+    }
+
+    &.title--black {
+        color: $black;
+    }
+}

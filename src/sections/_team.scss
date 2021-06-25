@@ -1,0 +1,28 @@
+/*
+*   Team
+*   Style for class team and its child elements
+*/
+.team {
+    padding: 80px 0;
+
+    //  Team grid
+    //  Contains grid with 4 items in row
+    &__grid {
+        @include grid(toRem(250) toRem(250) toRem(250) toRem(250), toRem(50), toRem(50), space-between);
+    
+        @include breakpoint(lg) {
+            justify-content: center;
+            @include grid(toRem(200) toRem(200) toRem(200) toRem(200), toRem(50), toRem(50));
+        }
+
+        @include breakpoint(md) {
+            justify-content: center;
+            @include grid(toRem(250) toRem(250), toRem(50), toRem(50));
+        }
+
+        @include breakpoint(sm) {
+            justify-content: center;
+            @include grid(toRem(300), toRem(50), toRem(50));
+        }
+    }
+}

@@ -1,0 +1,28 @@
+/*
+*   Gallery
+*   Style for class gallery and its child elements
+*/
+.gallery {
+    padding: toRem(80) 0;
+
+    //   Gallery grid
+    //   Contains grid with 3 elements in row
+    &__grid {
+        @include grid(toRem(348) toRem(348) toRem(348), toRem(50), toRem(50));
+
+        @include breakpoint(lg) {
+            justify-content: center;
+            @include grid(toRem(348) toRem(348), toRem(50), toRem(50));
+        }
+
+        @include breakpoint(md) {
+            justify-content: center;
+            @include grid(toRem(348) toRem(348), toRem(50), toRem(50));
+        }
+
+        @include breakpoint(sm) {
+            justify-content: center;
+            @include grid(toRem(300), toRem(50), toRem(50));
+        }
+    }
+}

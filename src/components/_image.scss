@@ -1,0 +1,37 @@
+//   Item
+.image-item {
+    //  Overlay for image
+    //  Hovering over gallery img will show this overlay
+    img {
+        width: 100%;
+    }
+    
+    span.img-overlay {
+        background: $dark-pink;
+        opacity: 0.4;
+        display: none;
+        height: calc(100% - 6px);
+        width: 100%;
+        top: 0;
+        position: absolute;
+
+        &::after {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f067";
+            color: $white !important;
+            opacity: 1 !important;
+            font-size: toRem(40);
+            top: 50%;
+            left: 45%;
+            transform: translate(-50%, -45%);
+            position: relative;
+            text-align: $primary-align;
+        }
+    }
+
+    &:hover span.img-overlay {
+        display: block;
+        cursor: pointer;
+    }
+}

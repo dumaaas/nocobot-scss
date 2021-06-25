@@ -1,0 +1,19 @@
+//  Lists
+//  Letter-spacing list
+$ls: (base: -10,
+    heading: 10,
+    button: 5,
+);
+
+//  Letter-spacing converter
+@function ls($name) {
+    $value: map_get($ls, $name);
+    @return ($value / 1000) * 1em;
+}
+
+//  Converter from px to rem
+@function toRem($value) {
+    $remValue: ($value / 16) + rem;
+    @return $remValue;
+}
+

@@ -1,0 +1,53 @@
+//  Import of utilities
+@import './utilities/variables';
+@import './utilities/mixins';
+@import './utilities/placeholders';
+@import './utilities/functions';
+
+//  Import of base styles
+@import './base/typography';
+@import './base/base';
+
+//  Import of layouts
+@import './layout/header';
+@import './layout/topbar';
+@import './layout/container';
+@import './layout/wrapper';
+@import './layout/overlay';
+@import './layout/footer';
+
+//  Import of components
+@import './components/buttons';
+@import './components/title';
+@import './components/figure';
+@import './components/card';
+@import './components/image';
+
+//  Import of sections
+@import './sections/pageintro';
+@import './sections/about';
+@import './sections/blog';
+@import './sections/contact';
+@import './sections/gallery';
+@import './sections/products';
+@import './sections/team';
+@import './sections/yousaid';
+
+/*
+*   Header active link
+*   When link is active, font color is #{$dark-pink}
+*/
+.activeLink {
+    color: $dark-pink;
+}
+
+/*
+*   Background style
+*   Default behaviour of bgeded sections
+*/
+.bgded {
+    background-position: top $primary-align;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+

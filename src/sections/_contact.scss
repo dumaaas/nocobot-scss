@@ -1,0 +1,46 @@
+/*
+*   Contact
+*   Style for class contact and its child elements
+*/
+.contact {
+    padding: 80px 0;
+
+    &__grid {
+        @include grid(toRem(249) toRem(249) toRem(249) toRem(249), toRem(50), toRem(50), space-between);
+        
+        @include breakpoint(lg) {
+            justify-content: center;
+            @include grid(toRem(200) toRem(249) toRem(200) toRem(200), toRem(50), toRem(50));
+        }
+
+        @include breakpoint(md) {
+            justify-content: center;
+            @include grid(toRem(320) toRem(320), toRem(50), toRem(50));
+        }
+
+        @include breakpoint(sm) {
+            justify-content: center;
+            @include grid(toRem(300), toRem(50), toRem(50));
+        }
+        &-item {
+            @include flex($primary-direction);
+            margin: $mx-auto;
+            i {
+                font-size: toRem(18);
+                @include border(1px, solid, $light-pink, toRem(50));
+                color: $light-pink;
+                padding: toRem(15);
+            }
+
+            &-content {
+                padding: toRem(5) 0 0 toRem(20);
+                @include flex($secondary-direction);
+                color: $white;
+
+                p {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}

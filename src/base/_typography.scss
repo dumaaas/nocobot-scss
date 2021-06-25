@@ -1,0 +1,51 @@
+/*
+*   Include (mixins)
+*   Example of including mixins that have different parameters
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include font-style($fontFamily: "Georgia, Times New Roman, Times, serif",
+        $fontWeight: normal,
+        $color: $white,
+        $lineHeight: normal,
+        $letterSpacing: ls(heading),
+    );
+}
+
+/*
+*   Function
+*   Example of using function that converts font-size from px to rem
+*/
+h1 {
+    font-size: toRem(35.2);
+}
+
+h2 {
+    font-size: toRem(32);
+}
+
+h3 {
+    font-size: toRem(64);
+}
+
+h5 {
+    font-size: toRem(22.4);
+}
+
+h6 {
+    font-size: toRem(19.2);
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    color: $white;
+}

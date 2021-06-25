@@ -1,0 +1,65 @@
+/*
+*   Blog
+*   Style for class blog and its child elements
+*/
+.blog {
+    padding: toRem(80) 0;
+    
+    &__grid {
+        @include grid(toRem(348) toRem(348) toRem(348), toRem(50), toRem(50));
+
+        @include breakpoint(lg) {
+            justify-content: center;
+            @include grid(toRem(280) toRem(280) toRem(280), toRem(50), toRem(50));
+        }
+
+        @include breakpoint(md) {
+            
+            justify-content: center;
+            @include grid(toRem(348) toRem(348), toRem(50), toRem(50));
+
+            &-item:nth-child(3) {
+                display: none;
+            }
+        }
+
+        @include breakpoint(sm) {
+            justify-content: center;
+            @include grid(toRem(300), toRem(50), toRem(50));
+        }
+        footer {
+            padding: toRem(30) 0;
+            @extend %flex-between;
+
+            .date {
+                padding: toRem(10) toRem(15);
+                text-align: $primary-align;
+                background-color: $light-gray;
+                height: fit-content;
+
+                p {
+                    color: darken($light-gray, 40%);
+                    font-weight: 700;
+                    font-size: toRem(20);
+                }
+
+                hr {
+                    margin: toRem(10) 0;
+                }
+            }
+
+            .description {
+                padding-left: toRem(10);
+
+                h6 {
+                    color: black;
+                }
+
+                p {
+                    margin-top: toRem(10);
+                }
+            }
+        }
+
+    }
+}

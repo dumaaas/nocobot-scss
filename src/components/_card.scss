@@ -1,0 +1,21 @@
+.card {
+    width: toRem(180);
+    padding: toRem(25);
+    margin: $mx-auto;
+    
+    @include breakpoint(xl) {
+        width: toRem(240);
+    }
+
+    //   Card hover
+    //   On card hover we apply box-shadow style
+    &:hover {
+        box-shadow: $resultsCard-shadow;
+    }
+
+    h6 {
+        color: $dark-pink;
+        letter-spacing: toRem(0.2);
+        padding-bottom: toRem(10);
+    }
+}

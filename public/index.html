@@ -8,12 +8,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learning Sass">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Sass">
+    <meta name="author" content="Marko Dumnic">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
     <!-- Style -->
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/main.css">
 
     <!-- Title -->
     <title>Nocobot</title>
@@ -23,8 +26,6 @@
 
 <body>
 
-    <!-- Hello there. I am making a new pull request. Can u please check this? -->
-    <!-- I am making another change so I can test if pull request is working for more commits -->
     <!-- Topbar -->
     <div class="wrapper row0">
         <div class="topbar clear hoc">
@@ -78,7 +79,7 @@
                     </ul>
                 </div>
                 <div class="header__right">
-                    <ul>
+                    <ul class="big">
                         <li>
                             <a href="#" class="">
                                 Hero
@@ -110,6 +111,11 @@
                             </a>
                         </li>
                     </ul>
+                    <ul class="small">
+                        <p>
+                            <i class="fas fa-bars"></i>
+                        </p>
+                    </ul>
                 </div>
             </header>
         </div>
@@ -117,7 +123,7 @@
             <div class="pageintro hoc clear">
                 <article>
                     <h3>
-                        Welcome to this page
+                        Welcome <span>to this page</span>
                     </h3>
                     <p>
                         A massa etiam augue nunc lectus duis eget libero non nisi lobortis suscipit praesent viverra nam
@@ -139,9 +145,9 @@
         <section class="wrapper row3">
             <div class="about hoc clear ">
                 <div class="about__introblocks">
-                    <figure>
+                    <figure class="figure--about">
                         <img src="./images/348x400.png" alt="" />
-                        <figcaption>
+                        <figcaption class="figcaption--about">
                             <h6>
                                 Mollis Suspicit
                             </h6>
@@ -153,9 +159,9 @@
                             </div>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure class="figure--about">
                         <img src="./images/348x400.png" alt="" />
-                        <figcaption>
+                        <figcaption class="figcaption--about">
                             <h6>
                                 Vestibulum Maecenas
                             </h6>
@@ -167,9 +173,9 @@
                             </div>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure class="figure--about">
                         <img src="./images/348x400.png" alt="" />
-                        <figcaption>
+                        <figcaption class="figcaption--about">
                             <h6>
                                 Pellentesque Enim
                             </h6>
@@ -232,7 +238,7 @@
         <!-- Gallery -->
         <section class="bgded overlay" style="background-image:url('./images/01.png');">
             <div class="gallery hoc clear">
-                <div class="gallery__title">
+                <div class="title">
                     <p>
                         Pulvinar sem eu tincidunt magna
                     </p>
@@ -241,27 +247,27 @@
                     </h2>
                 </div>
                 <div class="gallery__grid">
-                    <div class="gallery__grid-item">
+                    <div class="image-item">
                         <img src="./images/348x261.png" alt="" />
                         <span class="img-overlay"></span>
                     </div>
-                    <div class="gallery__grid-item">
+                    <div class="image-item">
                         <img src="./images/348x261.png" alt="" />
                         <span class="img-overlay"></span>
                     </div>
-                    <div class="gallery__grid-item">
+                    <div class="image-item">
                         <img src="./images/348x261.png" alt="" />
                         <span class="img-overlay"></span>
                     </div>
-                    <div class="gallery__grid-item">
+                    <div class="image-item">
                         <img src="./images/348x261.png" alt="" />
                         <span class="img-overlay"></span>
                     </div>
-                    <div class="gallery__grid-item">
+                    <div class="image-item">
                         <img src="./images/348x261.png" alt="" />
                         <span class="img-overlay"></span>
                     </div>
-                    <div class="gallery__grid-item">
+                    <div class="image-item">
                         <img src="./images/348x261.png" alt="" />
                         <span class="img-overlay"></span>
                     </div>
@@ -272,7 +278,7 @@
         <!-- Team -->
         <section style="background-color: #F4F4F4;">
             <div class="team hoc clear">
-                <div class="gallery__title">
+                <div class="title title--black">
                     <p>
                         Vel lorem quis arcu euismod faucibus
                     </p>
@@ -281,9 +287,9 @@
                     </h2>
                 </div>
                 <div class="team__grid">
-                    <figure class="team__grid-item">
+                    <figure>
                         <img src="./images/300x300.png" alt="" />
-                        <figcaption>
+                        <figcaption class="figcaption--team">
                             <h6>
                                 Mollis Suspicit
                             </h6>
@@ -292,9 +298,9 @@
                             </p>
                         </figcaption>
                     </figure>
-                    <figure class="team__grid-item">
+                    <figure>
                         <img src="./images/300x300.png" alt="" />
-                        <figcaption>
+                        <figcaption class="figcaption--team">
                             <h6>
                                 Mollis Suspicit
                             </h6>
@@ -303,9 +309,9 @@
                             </p>
                         </figcaption>
                     </figure>
-                    <figure class="team__grid-item">
+                    <figure>
                         <img src="./images/300x300.png" alt="" />
-                        <figcaption>
+                        <figcaption class="figcaption--team">
                             <h6>
                                 Mollis Suspicit
                             </h6>
@@ -314,9 +320,9 @@
                             </p>
                         </figcaption>
                     </figure>
-                    <figure class="team__grid-item">
+                    <figure>
                         <img src="./images/300x300.png" alt="" />
-                        <figcaption>
+                        <figcaption class="figcaption--team">
                             <h6>
                                 Mollis Suspicit
                             </h6>
@@ -327,13 +333,12 @@
                     </figure>
                 </div>
             </div>
-            </div>
         </section>
 
         <!-- Products -->
         <section style="background-color: #fff;">
             <div class="products hoc clear">
-                <div class="gallery__title">
+                <div class="title title--black">
                     <p>
                         Nisl donec eu neque nisi molestie
                     </p>
@@ -342,40 +347,46 @@
                     </h2>
                 </div>
                 <div class="products__grid">
-                    <div class="products__grid-item">
+                    <div class="image-item">
                         <img src="./images/249x100.png" alt="" />
+                        <span class="img-overlay"></span>
                     </div>
-                    <div class="products__grid-item">
+                    <div class="image-item">
                         <img src="./images/249x100.png" alt="" />
+                        <span class="img-overlay"></span>
                     </div>
-                    <div class="products__grid-item">
+                    <div class="image-item">
                         <img src="./images/249x100.png" alt="" />
+                        <span class="img-overlay"></span>
                     </div>
-                    <div class="products__grid-item">
+                    <div class="image-item">
                         <img src="./images/249x100.png" alt="" />
+                        <span class="img-overlay"></span>
                     </div>
-                    <div class="products__grid-item">
+                    <div class="image-item">
                         <img src="./images/249x100.png" alt="" />
+                        <span class="img-overlay"></span>
                     </div>
-                    <div class="products__grid-item">
+                    <div class="image-item">
                         <img src="./images/249x100.png" alt="" />
+                        <span class="img-overlay"></span>
                     </div>
-                    <div class="products__grid-item">
+                    <div class="image-item">
                         <img src="./images/249x100.png" alt="" />
+                        <span class="img-overlay"></span>
                     </div>
-                    <div class="products__grid-item">
+                    <div class="image-item">
                         <img src="./images/249x100.png" alt="" />
+                        <span class="img-overlay"></span>
                     </div>
-
                 </div>
-            </div>
             </div>
         </section>
 
         <!-- You said -->
         <section class="bgded overlay" style="background-image:url('./images/01.png');">
             <div class="yousaid hoc clear">
-                <div class="gallery__title">
+                <div class="title">
                     <p>
                         Pulvinar sem eu tincidunt magna
                     </p>
@@ -410,7 +421,7 @@
         <!-- Blog -->
         <section style="background-color: #fff;">
             <div class="blog hoc clear">
-                <div class="gallery__title">
+                <div class="title title--black">
                     <p>
                         Nisl donec eu neque nisi molestie
                     </p>
@@ -420,17 +431,19 @@
                 </div>
                 <div class="blog__grid">
                     <div class="blog__grid-item">
-                        <img src="./images/348x261.png" alt="" />
-                        <figcaption>
-                            <h6>
-                                <i class="fas fa-user"></i>
-                                Admin
-                            </h6>
-                            <span>
-                                <i class="fas fa-comments"></i>
-                                Comments (10)
-                            </span>
-                        </figcaption>
+                        <figure>
+                            <img src="./images/348x261.png" alt="" />
+                            <figcaption class="figcaption--blog">
+                                <h6>
+                                    <i class="fas fa-user"></i>
+                                    Admin
+                                </h6>
+                                <span>
+                                    <i class="fas fa-comments"></i>
+                                    Comments (10)
+                                </span>
+                            </figcaption>
+                        </figure>
                         <footer>
                             <div class="date">
                                 <p>
@@ -456,17 +469,19 @@
                         </a>
                     </div>
                     <div class="blog__grid-item">
-                        <img src="./images/348x261.png" alt="" />
-                        <figcaption>
-                            <h6>
-                                <i class="fas fa-user"></i>
-                                Admin
-                            </h6>
-                            <span>
-                                <i class="fas fa-comments"></i>
-                                Comments (10)
-                            </span>
-                        </figcaption>
+                        <figure>
+                            <img src="./images/348x261.png" alt="" />
+                            <figcaption class="figcaption--blog">
+                                <h6>
+                                    <i class="fas fa-user"></i>
+                                    Admin
+                                </h6>
+                                <span>
+                                    <i class="fas fa-comments"></i>
+                                    Comments (10)
+                                </span>
+                            </figcaption>
+                        </figure>
                         <footer>
                             <div class="date">
                                 <p>
@@ -492,17 +507,19 @@
                         </a>
                     </div>
                     <div class="blog__grid-item">
-                        <img src="./images/348x261.png" alt="" />
-                        <figcaption>
-                            <h6>
-                                <i class="fas fa-user"></i>
-                                Admin
-                            </h6>
-                            <span>
-                                <i class="fas fa-comments"></i>
-                                Comments (10)
-                            </span>
-                        </figcaption>
+                        <figure>
+                            <img src="./images/348x261.png" alt="" />
+                            <figcaption class="figcaption--blog">
+                                <h6>
+                                    <i class="fas fa-user"></i>
+                                    Admin
+                                </h6>
+                                <span>
+                                    <i class="fas fa-comments"></i>
+                                    Comments (10)
+                                </span>
+                            </figcaption>
+                        </figure>
                         <footer>
                             <div class="date">
                                 <p>
@@ -532,7 +549,7 @@
         </section>
 
         <!-- Contact -->
-        <section style="background-color: #A032AB;">
+        <div style="background-color: #A032AB;">
             <div class="contact hoc clear">
                 <div class="contact__grid">
                     <div class="contact__grid-item">
@@ -589,7 +606,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- Footer -->
         <footer class="wrapper row0">

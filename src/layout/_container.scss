@@ -1,0 +1,34 @@
+/*
+*   Container 
+*/
+.hoc {
+    display: block;
+    margin: $mx-auto;
+    max-width: toRem(1140);
+    padding: 0 toRem(20);
+    
+    @include breakpoint(lg) {
+        max-width: toRem(970);
+    }
+
+    @include breakpoint(md) {
+        max-width: toRem(750);
+    }
+
+    @include breakpoint(sm) {
+        max-width: toRem(700);
+    }
+}
+
+.clear {
+    &::after {
+        clear: both;
+        display: block;
+    }
+}
+
+.clear::before,
+.clear::after {
+    display: table;
+    content: "";
+}
